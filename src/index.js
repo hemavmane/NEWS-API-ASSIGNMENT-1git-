@@ -1,30 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import {App} from './App';
-import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from 'react-router-dom';
-import { ChangeModeProvider } from './Component/JS-File/ChangeMode';
-import { NewsApiProvider } from './Component/JS-File/NewsApi';
-import { CommentOnPost } from './Component/JS-File/Comment';
-// import { FooterProvider } from './Component/JS-File/Footer';
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import { App } from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter } from "react-router-dom";
+import { ChangeModeProvider } from "./Component/JS-File/ChangeMode";
+import { NewsApiProvider } from "./Component/JS-File/NewsApi";
+import { FooterProvider } from "./Component/JS-File/Footer";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
- 
-     {/* <FooterProvider> */}
-    <ChangeModeProvider>
-      <NewsApiProvider>
-    <App/>
-    </NewsApiProvider>
-    </ChangeModeProvider>
-   
-
-    {/* </FooterProvider> */}
+     
+        <ChangeModeProvider>
+          <NewsApiProvider>
+            <App />
+          </NewsApiProvider>
+        </ChangeModeProvider>
+        <FooterProvider>
+        </FooterProvider>
     </BrowserRouter>
-    
   </React.StrictMode>
 );
 

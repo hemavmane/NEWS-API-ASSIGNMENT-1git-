@@ -17,17 +17,17 @@ export  function App() {
   return (
     <>     
      <NavbarLogos/>
-
-       <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/Headline" element={<Headline/>}/>
+     <Routes> 
+      <Route path="/" element={<Home/>}/> 
+      <Route path="/Headline" element={<Headline/>}/>
         <Route path="/Activity" element={<Activity/>}/>
         <Route path="/About" element={<About/>}/>
-        <Route path="/Contact" element={<Contact/>}/>
+        <Route path="/Contact" element={<Contact/>}/> 
        </Routes>
        <FooterProvider/>
    </>
   );
 }
+
 
 
